@@ -1,0 +1,27 @@
+# Customer Feature Validation Report
+
+This report validates the one-row-per-customer feature table.
+
+| check_name                                            | result   | value                    | notes                                                                   |
+|:------------------------------------------------------|:---------|:-------------------------|:------------------------------------------------------------------------|
+| customer_unique_id is unique                          | PASS     | 0 duplicate customer IDs | customer_features must contain one row per customer.                    |
+| every customer has at least one delivered order       | PASS     | 0 invalid customers      | A customer in this table should have at least one delivered order.      |
+| cancellation_rate is between 0 and 1                  | PASS     | 0 invalid values         | A percentage/share cannot be below 0 or above 1.                        |
+| discounted_order_share is between 0 and 1             | PASS     | 0 invalid values         | A percentage/share cannot be below 0 or above 1.                        |
+| discounted_spend_share is between 0 and 1             | PASS     | 0 invalid values         | A percentage/share cannot be below 0 or above 1.                        |
+| discounted_repeat_order_share is between 0 and 1      | PASS     | 0 invalid values         | A percentage/share cannot be below 0 or above 1.                        |
+| discount_dependency_score is between 0 and 100        | PASS     | 0 invalid scores         | The score is used later for discount-responsiveness segments.           |
+| recency_days is non-negative                          | PASS     | 0 invalid values         | Recency is the number of days since the customer's latest order.        |
+| customer_age_days is non-negative                     | PASS     | 0 invalid values         | Customer age is the number of days since first purchase.                |
+| 180-day eligible customers have realized CLV          | PASS     | 0 missing CLV values     | Customers with a complete 180-day window should have realized_clv_180.  |
+| recent customers do not have misleading 180-day CLV   | PASS     | 0 unexpected CLV values  | Customers without 180 observed days should have missing CLV.            |
+| customer count                                        | INFO     | 93,358                   | Number of unique customers with at least one delivered order.           |
+| average delivered orders per customer                 | INFO     | 1.03                     | Useful context before interpreting repeat behavior.                     |
+| 180-day repeat rate among eligible customers          | INFO     | 3.11%                    | Only customers with a complete 180-day observation window are included. |
+| average realized 180-day CLV among eligible customers | INFO     | R$59.04                  | Scenario-based contribution-margin CLV.                                 |
+
+## Interpretation
+
+- `PASS`: expected rule is correct.
+- `FAIL`: fix before segmentation.
+- `INFO`: useful descriptive context.

@@ -1,0 +1,7 @@
+customer_segment,elasticity_base,elasticity_conservative,elasticity_optimistic,maximum_discount_pct,reason
+Full-price loyalist,-0.30,-0.15,-0.50,0.10,Low assumed price sensitivity because this segment already purchases mostly at full price
+Deal-responsive profitable,-1.20,-0.80,-1.50,0.20,Moderate-to-high assumed response while remaining margin-positive
+Discount-dependent low-margin,-1.80,-1.20,-2.20,0.15,High assumed price sensitivity but discount cap protects margin
+At-risk / low engagement,-1.00,-0.60,-1.30,0.20,Moderate assumed response for win-back customers
+Repeat generalist,-0.60,-0.35,-0.90,0.15,Moderate-low assumed response
+New / one-order customer,-0.80,-0.50,-1.10,0.10,Moderate assumed welcome-offer response

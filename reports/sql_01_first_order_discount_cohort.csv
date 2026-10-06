@@ -1,0 +1,4 @@
+first_order_discount_band,eligible_customers,repeat_rate_180_days_pct,average_realized_clv_180,total_realized_clv_180,average_discount_dependency_score
+0% (Full price),16780,3.12,67.47,1132201.22,0.64
+1-10%,36103,3.04,54.96,1984075.06,52.6
+11-15%,3024,3.8,61.0,184475.64,52.43

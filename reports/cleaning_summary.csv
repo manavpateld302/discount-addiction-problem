@@ -1,0 +1,7 @@
+table_name,row_count,column_count
+customers_clean,99441,5
+products_clean,32951,10
+order_items_clean,112650,14
+orders_clean,99441,21
+payments_clean,99440,4
+reviews_clean,98673,4

@@ -1,0 +1,3 @@
+scenario,first_order_discounted,log_first_order_baseline_value,first_purchase_month,predicted_repeat_probability_180_days
+First order: full price,0,4.454347296253507,2017-11,0.02807124649991606
+First order: discounted,1,4.454347296253507,2017-11,0.02795542256879337

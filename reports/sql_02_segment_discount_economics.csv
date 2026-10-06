@@ -1,0 +1,29 @@
+customer_segment,discount_responsiveness_tier,promotion_id,unique_customers,delivered_orders,average_discount_depth_pct,total_discount_cost,total_synthetic_revenue,total_contribution_margin,average_order_margin
+New / one-order customer,Discount-responsive,WELCOME10,63405,63405,10.0,878507.38,7906566.47,3480273.05,54.89
+New / one-order customer,Discount-indifferent,FULL_PRICE,27152,27152,0.0,0.0,3708015.51,1829873.23,67.39
+Full-price loyalist,Discount-indifferent,FULL_PRICE,577,1225,0.0,0.0,150472.35,74338.76,60.68
+Deal-responsive profitable,Discount-indifferent,FULL_PRICE,731,799,0.0,0.0,144497.73,70510.78,88.25
+Deal-responsive profitable,Discount-indifferent,WELCOME10,715,715,10.0,13739.42,123654.76,53665.51,75.06
+Deal-responsive profitable,Discount-dependent,WELCOME10,249,249,10.0,4746.18,42715.62,19409.87,77.95
+Repeat generalist,Discount-indifferent,FULL_PRICE,654,739,0.0,0.0,36494.47,18594.03,25.16
+Deal-responsive profitable,Discount-responsive,FULL_PRICE,158,167,0.0,0.0,30147.01,15497.96,92.8
+Repeat generalist,Discount-indifferent,WELCOME10,612,612,10.0,3358.36,30225.26,13518.88,22.09
+Deal-responsive profitable,Discount-dependent,LAPSED20,221,226,20.0,8032.28,32129.12,12726.64,56.31
+Deal-responsive profitable,Discount-responsive,LAPSED20,147,156,20.0,5432.72,21730.88,8518.72,54.61
+Discount-dependent low-margin,Discount-dependent,WELCOME10,291,291,10.0,1942.8,17485.21,7179.54,24.67
+Discount-dependent low-margin,Discount-dependent,LAPSED20,266,269,20.0,3980.97,15923.9,5335.8,19.84
+Repeat generalist,Discount-responsive,FULL_PRICE,141,148,0.0,0.0,7742.76,4069.22,27.49
+Repeat generalist,Discount-responsive,LAPSED20,128,134,20.0,1994.15,7976.58,3016.55,22.51
+Deal-responsive profitable,Discount-dependent,CATEGORY15,30,32,15.0,1043.71,5914.33,2726.38,85.2
+Deal-responsive profitable,Discount-responsive,WELCOME10,35,35,10.0,544.06,4896.58,2157.73,61.65
+Deal-responsive profitable,Discount-responsive,CATEGORY15,12,12,15.0,513.33,2908.87,1052.97,87.75
+Discount-dependent low-margin,Discount-dependent,CATEGORY15,28,28,15.0,282.11,1598.62,770.68,27.52
+Repeat generalist,Discount-responsive,WELCOME10,30,30,10.0,155.58,1400.26,684.38,22.81
+Deal-responsive profitable,Discount-indifferent,LAPSED20,18,18,20.0,537.8,2151.19,637.62,35.42
+Repeat generalist,Discount-responsive,CATEGORY15,13,15,15.0,162.61,921.45,398.4,26.56
+Repeat generalist,Discount-indifferent,LAPSED20,11,11,20.0,111.24,444.95,187.45,17.04
+Full-price loyalist,Discount-indifferent,LAPSED20,4,4,20.0,36.37,145.48,91.89,22.97
+Deal-responsive profitable,Discount-dependent,FULL_PRICE,1,1,0.0,0.0,74.9,71.69,71.69
+Full-price loyalist,Discount-indifferent,WELCOME10,3,3,10.0,9.98,89.81,40.78,13.59
+Repeat generalist,Discount-indifferent,CATEGORY15,1,1,15.0,4.35,24.65,12.08,12.08
+Full-price loyalist,Discount-indifferent,CATEGORY15,1,1,15.0,2.1,11.89,4.36,4.36

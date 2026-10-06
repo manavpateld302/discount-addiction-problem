@@ -1,0 +1,5 @@
+table_name,source_file,row_count,column_count
+orders_enriched,orders_enriched.parquet,99441,41
+order_items_enriched,order_items_enriched.parquet,112650,34
+customer_features,customer_features.parquet,93358,44
+customer_segments,customer_segments.parquet,93358,51

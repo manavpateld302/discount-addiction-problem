@@ -1,0 +1,28 @@
+# Enriched Table Validation Report
+
+This report validates synthetic promotions, discount calculations, and estimated margin calculations.
+
+| check_name                                         | result   | value                               | notes                                                                     |
+|:---------------------------------------------------|:---------|:------------------------------------|:--------------------------------------------------------------------------|
+| orders_enriched: order_id is unique                | PASS     | 0 duplicate order IDs               | There must be exactly one row per order.                                  |
+| order_items_enriched: item key is unique           | PASS     | 0 duplicate item keys               | Each order_id + order_item_id pair must occur once.                       |
+| FULL_PRICE: correct discount percentage            | PASS     | 0 incorrect orders                  | Expected discount_pct = 0%.                                               |
+| WELCOME10: correct discount percentage             | PASS     | 0 incorrect orders                  | Expected discount_pct = 10%.                                              |
+| CATEGORY15: correct discount percentage            | PASS     | 0 incorrect orders                  | Expected discount_pct = 15%.                                              |
+| LAPSED20: correct discount percentage              | PASS     | 0 incorrect orders                  | Expected discount_pct = 20%.                                              |
+| order discount arithmetic is correct               | PASS     | 0 orders differ by more than R$0.01 | discount_amount should equal baseline_merchandise_value × discount_depth. |
+| discounts apply only to delivered orders           | PASS     | 0 non-delivered discounted orders   | Canceled/unavailable orders should not receive scenario discounts.        |
+| synthetic paid prices are non-negative             | PASS     | 0 negative prices                   | A synthetic paid price cannot be negative.                                |
+| estimated COGS is non-negative                     | PASS     | 0 negative COGS values              | Estimated COGS cannot be negative.                                        |
+| item margin reconciles to order margin             | PASS     | 0 orders differ by more than R$0.01 | Summed item contribution margin should equal order contribution margin.   |
+| delivered order count                              | INFO     | 96,478                              | Primary population for revenue, repeat, and CLV analysis.                 |
+| total synthetic discount cost                      | INFO     | R$925,137.50                        | Total scenario discount amount across all orders.                         |
+| total estimated contribution margin                | INFO     | R$5,625,364.96                      | Scenario-based contribution margin; not observed Olist profit.            |
+| delivered orders with negative contribution margin | INFO     | 0                                   | Negative-margin orders are possible and important to analyze.             |
+
+## Interpretation
+
+- `PASS`: calculation or structural rule is correct.
+- `WARNING`: review and document if needed.
+- `FAIL`: stop and fix before analysis.
+- `INFO`: descriptive total, not a pass/fail condition.

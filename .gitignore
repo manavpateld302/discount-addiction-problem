@@ -1,0 +1,42 @@
+# Python
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local raw and regenerated data
+data/raw/
+data/processed/
+*.duckdb
+*.parquet
+
+# Streamlit and environment secrets
+.streamlit/secrets.toml
+.env
+.env.*
+
+# Models
+models/*.pkl
+models/*.joblib
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log

@@ -1,0 +1,42 @@
+LOGISTIC REGRESSION: 180-DAY REPEAT PURCHASE
+================================================
+
+Outcome: repeat_within_180_days
+Main predictor: first_order_discounted
+Controls: log first-order baseline value and first purchase month
+
+IMPORTANT: This is an observational synthetic-scenario model. It does not prove that a discount caused repeat behavior.
+
+                             Logit Regression Results                             
+==================================================================================
+Dep. Variable:     repeat_within_180_days   No. Observations:                55907
+Model:                              Logit   Df Residuals:                    55887
+Method:                               MLE   Df Model:                           19
+Date:                    Sun, 20 Sep 2026   Pseudo R-squ.:                0.004198
+Time:                            15:24:45   Log-Likelihood:                -7703.9
+converged:                          False   LL-Null:                       -7736.3
+Covariance Type:                nonrobust   LLR p-value:                 6.196e-07
+======================================================================================================
+                                         coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+Intercept                            -11.9936    487.107     -0.025      0.980    -966.706     942.718
+C(first_purchase_month)[T.2016-10]     7.8908    487.107      0.016      0.987    -946.822     962.603
+C(first_purchase_month)[T.2016-12]    26.8097   1571.529      0.017      0.986   -3053.331    3106.950
+C(first_purchase_month)[T.2017-01]     9.2781    487.107      0.019      0.985    -945.434     963.990
+C(first_purchase_month)[T.2017-02]     8.6572    487.107      0.018      0.986    -946.055     963.369
+C(first_purchase_month)[T.2017-03]     8.8634    487.107      0.018      0.985    -945.849     963.575
+C(first_purchase_month)[T.2017-04]     8.7927    487.107      0.018      0.986    -945.919     963.505
+C(first_purchase_month)[T.2017-05]     9.0431    487.107      0.019      0.985    -945.669     963.755
+C(first_purchase_month)[T.2017-06]     9.0672    487.107      0.019      0.985    -945.645     963.779
+C(first_purchase_month)[T.2017-07]     8.9636    487.107      0.018      0.985    -945.748     963.676
+C(first_purchase_month)[T.2017-08]     9.0808    487.107      0.019      0.985    -945.631     963.793
+C(first_purchase_month)[T.2017-09]     9.0494    487.107      0.019      0.985    -945.663     963.761
+C(first_purchase_month)[T.2017-10]     8.7618    487.107      0.018      0.986    -945.950     963.474
+C(first_purchase_month)[T.2017-11]     8.7967    487.107      0.018      0.986    -945.915     963.509
+C(first_purchase_month)[T.2017-12]     8.6208    487.107      0.018      0.986    -946.091     963.333
+C(first_purchase_month)[T.2018-01]     8.7686    487.107      0.018      0.986    -945.943     963.481
+C(first_purchase_month)[T.2018-02]     9.0727    487.107      0.019      0.985    -945.639     963.785
+C(first_purchase_month)[T.2018-03]     8.9105    487.107      0.018      0.985    -945.802     963.623
+first_order_discounted                -0.0043      0.053     -0.080      0.936      -0.108       0.100
+log_first_order_baseline_value        -0.0780      0.027     -2.900      0.004      -0.131      -0.025
+======================================================================================================
